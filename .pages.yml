@@ -1,0 +1,98 @@
+# Pages CMS configuration: gives Nabel an editing panel at https://app.pagescms.org
+# once this folder is on GitHub. See HOW-TO-UPDATE.md.
+
+media:
+  input: assets/img
+  output: assets/img
+
+content:
+  - name: projects
+    label: Portfolio projects
+    description: The rooms shown in the Portfolio section, in the order listed here. Drag to reorder. Every project needs a photo and a title in English and Arabic.
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title_en
+        label: Title (English)
+        description: Room and place, for example "Master suite, Heliopolis palace"
+        type: string
+        required: true
+      - name: title_ar
+        label: Title (Arabic) · العنوان بالعربية
+        description: مثال "جناح رئيسي، قصر في مصر الجديدة"
+        type: string
+        required: true
+      - name: category
+        label: Category
+        description: Decides which filter button shows this project
+        type: select
+        required: true
+        options:
+          values:
+            - name: res
+              label: Residence · مسكن
+            - name: pal
+              label: Palace · قصر
+            - name: hos
+              label: Hospitality · ضيافة
+      - name: year
+        label: Year
+        type: number
+        required: true
+      - name: image
+        label: Photo
+        description: Landscape JPG, about 1600 pixels wide and under 400 KB. The first project in the list is shown largest.
+        type: image
+        required: true
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: details_en
+        label: Details line (English)
+        description: Workshop and collection, for example "Soher · Iris collection". The year is added automatically.
+        type: string
+      - name: details_ar
+        label: Details line (Arabic) · سطر التفاصيل
+        description: مثال "سوهير · مجموعة Iris". تُضاف السنة تلقائيًا.
+        type: string
+      - name: alt_en
+        label: Photo description (English)
+        description: One plain sentence describing what is in the photo, read aloud to blind visitors and used by Google.
+        type: string
+        required: true
+      - name: alt_ar
+        label: Photo description (Arabic) · وصف الصورة
+        type: string
+        required: true
+
+  - name: site
+    label: Contact details and numbers
+    description: Used on both the English and Arabic pages.
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: email
+        label: Email address
+        type: string
+        required: true
+      - name: phone
+        label: Phone number
+        description: Written the way it should appear, for example "+20 100 123 4567"
+        type: string
+      - name: instagram
+        label: Instagram link
+        description: The full address, for example https://instagram.com/nabelelmasry
+        type: string
+      - name: years_in_practice
+        label: Years in practice
+        type: number
+      - name: residences_furnished
+        label: Residences furnished
+        description: Shown with a "+" after it
+        type: number
+      - name: spanish_workshops
+        label: Spanish workshops
+        type: number
