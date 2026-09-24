@@ -1,0 +1,68 @@
+[
+  {
+    "title_en": "Master suite, Heliopolis palace",
+    "title_ar": "جناح رئيسي، قصر في مصر الجديدة",
+    "category": "pal",
+    "year": 2024,
+    "image": "assets/img/heliopolis-suite.jpg",
+    "details_en": "Soher · Classic bedroom",
+    "details_ar": "سوهير · غرفة نوم كلاسيكية",
+    "alt_en": "Tufted silver headboard with a gilded carved frame",
+    "alt_ar": "لوح سرير فضي مُنجَّد بإطار منحوت مذهّب"
+  },
+  {
+    "title_en": "Formal dining, Sheikh Zayed",
+    "title_ar": "غرفة طعام رسمية، الشيخ زايد",
+    "category": "pal",
+    "year": 2025,
+    "image": "assets/img/sheikh-zayed-dining.jpg",
+    "details_en": "Soher · Iris collection",
+    "details_ar": "سوهير · مجموعة Iris",
+    "alt_en": "Long dining table under a tiered crystal chandelier",
+    "alt_ar": "طاولة طعام طويلة تحت ثريا كريستال متدرجة"
+  },
+  {
+    "title_en": "Reception hall, New Cairo",
+    "title_ar": "قاعة استقبال، القاهرة الجديدة",
+    "category": "res",
+    "year": 2023,
+    "image": "assets/img/new-cairo-reception.jpg",
+    "details_en": "Soher · Iris collection",
+    "details_ar": "سوهير · مجموعة Iris",
+    "alt_en": "Grey reception room with velvet armchairs and a brass chandelier",
+    "alt_ar": "قاعة استقبال رمادية بمقاعد مخملية وثريا نحاسية"
+  },
+  {
+    "title_en": "Gallery wall, Maadi",
+    "title_ar": "جدار العرض، المعادي",
+    "category": "res",
+    "year": 2025,
+    "image": "assets/img/maadi-gallery.jpg",
+    "details_en": "Franco Furniture",
+    "details_ar": "فرانكو فرنتشر",
+    "alt_en": "Black fluted sideboard beneath sculptural mirrors",
+    "alt_ar": "خزانة جانبية سوداء مضلّعة تحت مرايا بأشكال منحوتة"
+  },
+  {
+    "title_en": "Family room, Katameya",
+    "title_ar": "غرفة المعيشة العائلية، القطامية",
+    "category": "res",
+    "year": 2022,
+    "image": "assets/img/katameya-family.jpg",
+    "details_en": "Soher · Equus",
+    "details_ar": "سوهير · Equus",
+    "alt_en": "Curved brown velvet sofa around a round table",
+    "alt_ar": "أريكة مخملية بنية منحنية حول طاولة مستديرة"
+  },
+  {
+    "title_en": "Hotel lobby, El Alamein",
+    "title_ar": "ردهة فندق، العلمين",
+    "category": "hos",
+    "year": 2026,
+    "image": "assets/img/alamein-lobby.jpg",
+    "details_en": "Soher · Royal Luxe",
+    "details_ar": "سوهير · Royal Luxe",
+    "alt_en": "Hotel lounge under a glass roof with olive trees and a chandelier",
+    "alt_ar": "ردهة فندق تحت سقف زجاجي مع أشجار زيتون وثريا"
+  }
+]

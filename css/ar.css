@@ -1,0 +1,82 @@
+/* Arabic / right-to-left layer. Loaded after styles.css on /ar/ only. */
+
+:root{
+ --disp:"Amiri","Noto Naskh Arabic","Times New Roman",serif;
+ --lab:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+ --body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+}
+body{line-height:1.85}
+
+/* Arabic letters join, so tracking and capitals are switched off everywhere */
+.lab,.small,.links,.btn-o,.btn,.chips button,.menu-btn,label>span,.spec dt,.cue,.skip,.lb-x,.cursor,
+.ld-sub,.ld-foot,.empty button,.note{letter-spacing:0!important;text-transform:none}
+.lab{font-size:15px;font-weight:500}
+.small{font-size:13px}
+.links{font-size:16px}
+.btn-o{font-size:15px;padding:12px 24px}
+.btn{font-size:16px;font-weight:500}
+.chips button{font-size:15px}
+.menu-btn{font-size:15px}
+label>span{font-size:14px}
+.spec dt{font-size:14px}
+.cursor{font-size:14px}
+.lb-x{font-size:15px}
+
+/* Latin brand marks keep their own face and direction */
+.mono,.word,[lang="en"]{direction:ltr;unicode-bidi:isolate}
+.word{font-family:"Tenor Sans","Gill Sans",sans-serif}
+.small [lang="en"]{font-family:"Tenor Sans",sans-serif;font-size:.92em;letter-spacing:.06em}
+
+/* Naskh needs room above and below for dots and marks */
+h1,h2,h3{font-weight:400}
+.hero h1{line-height:1.2;letter-spacing:0}
+.igrid h2,.craft h2{line-height:1.45}
+.pf-head h2,.consult h2{line-height:1.25}
+.tile h3{line-height:1.5}
+.partners blockquote{line-height:1.7}
+.lb-t{line-height:1.5}
+.menu nav a{line-height:1.5}
+.w{padding-block:.14em .24em;margin-block:-.14em -.24em}
+.ld-w{padding-block:.18em .3em;margin-block:-.18em -.3em}
+.ld-name{letter-spacing:0;font-weight:700}
+.ld-sub{font-size:15px}
+.ld-foot{font-size:13px}
+.ld-pct{text-align:left;font-family:"Tenor Sans",sans-serif}
+.stats b{font-family:"Libre Caslon Display",Georgia,serif}
+
+/* mirror the layout */
+.hero::after{background:linear-gradient(270deg,rgba(15,14,13,.88) 0%,rgba(15,14,13,.35) 70%,rgba(15,14,13,.2)),linear-gradient(180deg,rgba(15,14,13,.55),rgba(15,14,13,.1) 40%,rgba(15,14,13,.96))}
+.hero-media img{transform-origin:40% 50%}
+.intro .ghost{left:auto;right:clamp(0px,2vw,40px)}
+.cue{right:auto;left:clamp(16px,5vw,72px)}
+.cue span{display:none}
+.links a::after{transform-origin:left}
+.links a:hover::after{transform-origin:right}
+.skip{left:auto;right:16px}
+.loader.out .ld-line{transform-origin:left}
+.js [data-reveal="line"]::before,.js [data-reveal="line"]::after{transform-origin:right}
+.marquee{direction:ltr}
+.mq-track{animation-direction:reverse}
+.mq-track span,.mq-track span:nth-child(even){font-style:normal}
+input[type="email"],input[type="tel"]{direction:ltr;text-align:right}
+::placeholder{text-align:right}
+.pnote{max-width:36ch}
+
+@media (prefers-reduced-motion:no-preference){
+ /* labels: no tracking animation in Arabic, fade and rise instead */
+ [dir="rtl"].js [data-reveal="lab"],[dir="rtl"].js [data-reveal="lab"].in{letter-spacing:0}
+ [dir="rtl"].js [data-reveal="lab"]{transform:translateY(14px);transition:opacity 1s var(--ease),transform 1.2s var(--ease);transition-delay:var(--d,0ms)}
+ [dir="rtl"].js [data-reveal="lab"].in{transform:none}
+ .w>span{transform-origin:100% 100%;transform:translateY(110%) rotate(-3deg)}
+ .in .w>span,.in.w>span{transform:none}
+ .loader.go .ld-sub{letter-spacing:0}
+}
+
+@media (max-width:600px){
+ .chips{-webkit-mask-image:linear-gradient(270deg,#000 85%,transparent);mask-image:linear-gradient(270deg,#000 85%,transparent)}
+ .chips.end{-webkit-mask-image:none;mask-image:none}
+ .hero .lab .br{margin-top:4px}
+ .lab{font-size:14px}
+ .stats .small{font-size:12px}
+ .loader.go .ld-sub{letter-spacing:0}
+}
